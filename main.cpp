@@ -1,11 +1,10 @@
 #include <iostream>
 #include "Task.h"
-#include <iostream>
 using namespace std;
 
 int main() {
     int menu=-1;
-    Task t;
+    Task t("");
 
     while (menu!=0)
     {
@@ -24,6 +23,7 @@ int main() {
                 cout<<"Scrivi l'attività"<<endl;
                 cin>>text;
                 t.setToDoText(text);
+                cout << t.getToDoText() << t.getTaskDate().day() << t.getTaskDate().month()<< t.getTaskDate().year()<<endl;
                 cout << "Attività registrata"<<endl;
                 break;
             case 2:
