@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     int menu=-1;
     TaskList list;
+
     while (menu!=0)
     {
         cout << "Digitare uno dei numeri del menù:"<<endl;

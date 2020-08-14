@@ -26,7 +26,7 @@ public:
         return taskDate;
     }
 
-    const bool compareTime(const Task &t);
+    bool compareTime(Task &t);
 
     const void printActivity();
 

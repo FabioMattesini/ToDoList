@@ -1,7 +1,7 @@
 
 #include "Task.h"
 
-Task::Task():completed(false) {}
+Task::Task():completed(false){}
 
 Task::Task(const std::string &toDoText, int day, int month, int year,int hour,int minute, bool completed):toDoText(toDoText),completed
 (completed),taskDate(date::day(day)/month/year),hour(hour),minute(minute){}
@@ -15,20 +15,24 @@ const void Task::printActivity() {
         std::cout<<" -Da completare"<<std::endl;
 }
 
-const bool Task::compareTime(const Task &t){
-    if(this->hour<t.hour)
+bool Task::compareTime(Task &t){ //restituisce true se la data di this è minore di t
+
+    if (this->taskDate < t.taskDate)
         return true;
-    if(this->hour>t.hour)
-        return false;
-
-    if (this->hour==t.hour){
-        if(this->minute<t.minute)
+    if (this->taskDate == t.taskDate) {
+        if (this->hour < t.hour)
             return true;
-        else
-            return false;
+        if (this->hour == t.hour) {
+            if (this->minute < t.minute)
+                return true;
+            else
+                return false;
+        }
+        else return false;
     }
+    else
+        return false;
 }
-
 
 
 
