@@ -13,6 +13,7 @@ int main() {
         cout << "0) Termina programma" << endl;
         cout << "1) Inserisci una nuova attività"<<endl;
         cout << "2) Visualizza tutte le attività" <<endl;
+        cout << "3) Rimuovi un attività" <<endl;
         cin>>menu;
         switch (menu) {
             case 0:
@@ -42,6 +43,17 @@ int main() {
             case 2:
                 cout<<"Visualizzazione attività:"<<endl;
                 list.printList();
+                break;
+            case 3:
+                cout<<"ELenco attività:"<<endl;
+                list.printList();
+                int pos;
+                cout<<"Digitare il numero dell'attività da eliminare"<<endl;
+                cin>>pos;
+                if(list.removeActivity(pos))
+                    cout<< "Attività eliminata"<<endl;
+                else
+                    cout<<"Selezione non valida!"<<endl;
                 break;
             default:
                 cout<<"Selezione non valida!"<<endl;

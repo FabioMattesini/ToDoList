@@ -29,4 +29,18 @@ void TaskList::addActivity(Task& t) { //aggiunge un'attività ordinata secondo l
 
 }
 
+bool TaskList::removeActivity(const int pos) {
+    if(pos>0 && pos<=activities.size()){
+        int i=0;
+        for(auto it=activities.begin();it!=activities.end();it++){
+            i++;
+            if(i==pos) {
+                activities.erase(it);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 
