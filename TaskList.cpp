@@ -1,15 +1,6 @@
 #include "TaskList.h"
 #include <exception>
 
-const void TaskList::printList() { //\b(todo)spostare questo metodo in una classe esterna
-    if(activities.empty())
-        std::cout<<"LISTA VUOTA!"<<std::endl;
-    else {
-        for (auto a:activities)
-            a.printActivity();
-    }
-}
-
 void TaskList::addActivity(Task& t) { //aggiunge un'attività ordinata secondo la data nella lista
     bool check= false;
     if(activities.empty())

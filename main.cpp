@@ -1,11 +1,13 @@
 #include <iostream>
 #include "Task.h"
 #include "TaskList.h"
+#include "TaskDisplayer.h"
 using namespace std;
 //\b(todo) Creare una classe per gestire liste di liste di attività
 int main() {
     int menu=-1;
     TaskList list;
+    TaskDisplayer td;
 
     while (menu!=0)
     {
@@ -35,18 +37,18 @@ int main() {
                 cout << "Inserisci il minuto dell'attività" << endl;
                 cin >> minute;
                 Task t(text, day, month, year, hour, minute);
-                t.printActivity();
+                td.displayTask(t);
                 list.addActivity(t);
                 cout << "Attività registrata" << endl;
                 break;
         }
             case 2:
                 cout<<"Visualizzazione attività:"<<endl;
-                list.printList();
+                td.displayTask(list);
                 break;
             case 3:
                 cout<<"ELenco attività:"<<endl;
-                list.printList();
+                td.displayTask(list);
                 int pos;
                 cout<<"Digitare il numero dell'attività da eliminare"<<endl;
                 cin>>pos;

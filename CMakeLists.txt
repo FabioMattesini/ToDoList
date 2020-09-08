@@ -3,5 +3,8 @@ project(ToDoList)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ToDoList main.cpp Task.cpp Task.h date.h TaskList.cpp TaskList.h)
+set(SOURCE_FILES Task.cpp TaskList.cpp TaskDisplayer.cpp)
+add_executable(ToDoList main.cpp)
+add_library(core ${SOURCE_FILES})
+target_link_libraries(ToDoList core)
 add_subdirectory(test)

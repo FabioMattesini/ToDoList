@@ -26,9 +26,16 @@ public:
         return taskDate;
     }
 
+    int getHour() const {
+        return hour;
+    }
+
+    int getMinute() const {
+        return minute;
+    }
+
     bool compareTime(Task &t);
 
-    const void printActivity();
     //\b(todo) aggiungere metodo per modificare l'attività
 
 private:
