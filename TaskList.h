@@ -6,16 +6,20 @@
 
 class TaskList {
 public:
+    TaskList();
+    TaskList(const std::string &name);
+
     void addActivity(Task& t); //metodo per aggiungere un attività ordinata in base a data e ora
-    void removeActivity(int pos);
+    void removeActivity(int pos); //metodo per rimuovere la task in posizione pos
+    int countCompleted();
+    int countNotCompleted();
 
     const std::list<Task> &getActivities() const {
         return activities;
     }
-    //\b(todo) aggiungere metodo per contare le attività completate
-
 
 private:
+    std::string name;
     std::list<Task> activities;
 };
 

@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "../TaskList.h"
 
-class TaskListFixture:public::testing::Test{
+class removeFixture:public::testing::Test{
 protected:
     void SetUp(){
         Task t1("t1",1,1,2000,12,12);
@@ -12,7 +12,8 @@ protected:
     TaskList list;
 };
 
-TEST_F(TaskListFixture,removeTest){
+TEST_F(removeFixture,removeTest){
     ASSERT_NO_THROW(list.removeActivity(1));
     ASSERT_THROW(list.removeActivity(2),std::out_of_range);
 }
+
