@@ -8,8 +8,8 @@ class TaskList {
 public:
     const void printList(); //metodo per stampare tutte le attività
     void addActivity(Task& t); //metodo per aggiungere un attività ordinata in base a data e ora
-    // \b(todo) Crea funzione per la rimozione delle attività
-    bool removeActivity(const int pos);
+    void removeActivity(int pos);
+    //\b(todo) aggiungere metodo per contare le attività completate
 
 
 private:

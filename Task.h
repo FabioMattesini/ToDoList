@@ -29,6 +29,7 @@ public:
     bool compareTime(Task &t);
 
     const void printActivity();
+    //\b(todo) aggiungere metodo per modificare l'attività
 
 private:
     std::string toDoText;  //testo relativo all'attività da svolgere

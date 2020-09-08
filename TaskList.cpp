@@ -1,6 +1,7 @@
 #include "TaskList.h"
+#include <exception>
 
-const void TaskList::printList() {
+const void TaskList::printList() { //\b(todo)spostare questo metodo in una classe esterna
     if(activities.empty())
         std::cout<<"LISTA VUOTA!"<<std::endl;
     else {
@@ -29,18 +30,18 @@ void TaskList::addActivity(Task& t) { //aggiunge un'attività ordinata secondo l
 
 }
 
-bool TaskList::removeActivity(const int pos) {
+void TaskList::removeActivity(int pos) { //metodo che rimuove l'attività in posizione pos o lancia un eccezione se pos non è valido
     if(pos>0 && pos<=activities.size()){
         int i=0;
         for(auto it=activities.begin();it!=activities.end();it++){
             i++;
             if(i==pos) {
                 activities.erase(it);
-                return true;
+                return;
             }
         }
     }
-    return false;
+    throw std::out_of_range("Attività non presente!");
 }
 
 

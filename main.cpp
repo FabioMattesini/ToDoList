@@ -2,7 +2,7 @@
 #include "Task.h"
 #include "TaskList.h"
 using namespace std;
-
+//\b(todo) Creare una classe per gestire liste di liste di attività
 int main() {
     int menu=-1;
     TaskList list;
@@ -50,10 +50,12 @@ int main() {
                 int pos;
                 cout<<"Digitare il numero dell'attività da eliminare"<<endl;
                 cin>>pos;
-                if(list.removeActivity(pos))
-                    cout<< "Attività eliminata"<<endl;
-                else
-                    cout<<"Selezione non valida!"<<endl;
+                try {
+                    list.removeActivity(pos);
+                }
+                catch (std::out_of_range& e) {
+                    cout<< e.what() <<endl;
+                }
                 break;
             default:
                 cout<<"Selezione non valida!"<<endl;
