@@ -1,4 +1,3 @@
-
 #ifndef TODOLIST_TASK_H
 #define TODOLIST_TASK_H
 #include <iostream>
@@ -36,7 +35,7 @@ public:
 
     bool compareTime(Task &t);
 
-    //\b(todo) aggiungere metodo per modificare l'attività
+    void changeTask(std::string text,int d,int m,int y,int h,int mi,bool c);
 
 private:
     std::string toDoText;  //testo relativo all'attività da svolgere

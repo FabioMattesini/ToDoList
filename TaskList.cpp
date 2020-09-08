@@ -1,5 +1,4 @@
 #include "TaskList.h"
-#include <exception>
 
 void TaskList::addActivity(Task& t) { //aggiunge un'attività ordinata secondo la data nella lista
     bool check= false;

@@ -25,6 +25,14 @@ bool Task::compareTime(Task &t){ //restituisce true se la data di this è minore
         return false;
 }
 
+void Task::changeTask(std::string text, int d, int m, int y, int h, int mi, bool c) {
+    toDoText=text;
+    taskDate=(date::day(d)/m/y);
+    hour=h;
+    minute=mi;
+    completed=c;
+}
+
 
 
 
