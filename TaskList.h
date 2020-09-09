@@ -18,6 +18,10 @@ public:
         return activities;
     }
 
+    const std::string &getName() const {
+        return name;
+    }
+
 private:
     std::string name;
     std::list<Task> activities;

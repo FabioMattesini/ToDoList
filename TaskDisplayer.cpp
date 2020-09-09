@@ -10,10 +10,20 @@ void TaskDisplayer::displayTask(Task t) {
 }
 
 void TaskDisplayer::displayTask(TaskList l) {
+    std::cout<<"Lista: "<<l.getName()<<std::endl;
     if(l.getActivities().empty())
         std::cout<<"LISTA VUOTA!"<<std::endl;
     else {
         for (auto a:l.getActivities())
             displayTask(a);
+    }
+}
+
+void TaskDisplayer::displayTask(TaskCollection t) {
+    if(t.getCollection().empty())
+        std::cout<<"NESSUNA LISTA DI ATTIVITÀ AGGIUNTA!"<<std::endl;
+    else{
+        for(auto c:t.getCollection())
+            displayTask(c);
     }
 }

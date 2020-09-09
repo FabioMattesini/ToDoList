@@ -3,7 +3,6 @@
 #include "TaskList.h"
 #include "TaskDisplayer.h"
 using namespace std;
-//\b(todo) Creare una classe per gestire liste di liste di attività
 int main() {
     int menu=-1;
     TaskList list;

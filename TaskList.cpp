@@ -31,7 +31,6 @@ void TaskList::removeActivity(int pos) { //metodo che rimuove l'attività in pos
             i++;
             if(i==pos) {
                 activities.erase(it);
-                std::cout<<"Attività eliminata!"<<std::endl;
                 return;
             }
         }
