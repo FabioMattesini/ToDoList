@@ -15,7 +15,7 @@ protected:
 };
 
 
-TEST_F(countFixture,counTest){
+TEST_F(countFixture,countTestList){
 ASSERT_EQ(2,list.countCompleted());
 ASSERT_EQ(1,list.countNotCompleted());
 }

@@ -12,7 +12,7 @@ protected:
     TaskList list;
 };
 
-TEST_F(removeFixture,removeTest){
+TEST_F(removeFixture,removeTestList){
     ASSERT_NO_THROW(list.removeActivity(1));
     ASSERT_THROW(list.removeActivity(2),std::out_of_range);
 }
